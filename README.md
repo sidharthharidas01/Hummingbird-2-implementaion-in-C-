@@ -1,4 +1,4 @@
-# Hummingbird-2-implementaion-in-C-
+# Hummingbird-2-implementaion-in-C++
 Implementation oh Hummingbird-2 Cryptography algorithm in C++
 
 This implementation is based on the following works: 
@@ -11,4 +11,8 @@ This implementation is based on the following works:
 ##Encryption and Decryption
 Encryption and decryption is done on 16 bit blocks of data. After each encryption/decryption state R has to be updated
 
-Encryption is done in encrypt.cpp, 
+Encryption is implemented in encrypt.cpp. Takes 128 bit key as an 8 element array of uint16_t type, 64 bit IV as an 4 element array of uint16_t type, plain text data as array of 16 bit blocks. It outputs cipher text as 16 bit blocks.
+
+Decryption is implemented in decrypt.cpp. Takes 128 bit key as an 8 element array of uint16_t type, 64 bit IV as an 4 element array of uint16_t type, cipher text data as array of 16 bit blocks. It outputs plain text as 16 bit blocks.
+
+Note that both keys and IV should be equal for encrypting and decrypting data.
